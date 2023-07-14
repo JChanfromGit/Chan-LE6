@@ -1,0 +1,20 @@
+<form name="form" (ngSubmit)="onSubmit()" #f="ngForm" style="max-width: 530px; padding: 15px; margin: 0 auto; border-radius: 0.3em; background-color: #f2f2f2;">
+  <h2 style="font-family: Helvetica, sans-serif; font-size: 28px; font-weight: 600; color: #000000; margin-top: 5%; text-align: center; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px;">REGISTRATION</h2>
+
+  <label for="username" style="display: block; font-size: 17px; font-weight: bold; margin-bottom: 10px;">Username</label>
+  <input type="text" name="username" [(ngModel)]="form.username" #username="ngModel" style="width: 100%; padding: 4.5px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px;" />
+
+  <label for="password" style="display: block; font-size: 17px; font-weight: bold; margin-bottom: 10px;">Password</label>
+  <input type="password" name="password" [(ngModel)]="form.password" #password="ngModel" style="width: 100%; padding: 4.5px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px;" />
+
+  <label for="firstName" style="display: block; font-size: 17px; font-weight: bold; margin-bottom: 10px;">First Name</label>
+  <input type="text" name="firstName" [(ngModel)]="form.firstName" #firstName="ngModel" style="width: 100%; padding: 4.5px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px;" />
+
+  <label for="lastName" style="display: block; font-size: 17px; font-weight: bold; margin-bottom: 10px;">Last Name</label>
+  <input type="text" name="lastName" [(ngModel)]="form.lastName" #lastName="ngModel" style="width: 100%; padding: 4.5px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px;" />
+
+  <div style="text-align: center;">
+    <button type="submit" style="background-color: #3eb3bb; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-size: 16px; cursor: pointer;">Submit</button>
+    <span style="text-align: center; display: block; margin-top: 15px;">Already have an account? <a routerLink="/login">Sign In</a></span>
+  </div>
+</form>

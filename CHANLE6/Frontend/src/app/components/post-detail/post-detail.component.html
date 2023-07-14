@@ -1,0 +1,31 @@
+<style>
+  .post-container {
+    padding: 16px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #70996d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+</style>
+
+<div class="post-container">
+  <h3 style="margin: 0; font-style: Helvetica; font-size: 24px; color: #fff; margin-bottom: 15px;">
+    <a href="/posts/{{ post?.id }}" style="text-decoration: none; color: #fff;">
+      {{ post?.title }}
+    </a>
+  </h3>
+  <div style="background-color: #fff; padding: 16px; border-radius: 8px;">
+    <p style="margin: 4px 0; font-style: Helvetica; font-size: 16px; color: #777;">
+      by: {{ post?.firstName }} {{ post?.lastName }}<br>on: {{ post?.dateCreated }}
+    </p>
+    <p style="margin: 8px 0; font-style: Helvetica; font-size: 18px; color: #111;">
+      {{ post?.body }}
+    </p>
+  </div>
+</div>

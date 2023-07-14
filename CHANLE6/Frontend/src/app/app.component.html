@@ -1,0 +1,20 @@
+<nav class="navbar" style="background-color: #390101; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+  <ul class="nav-links" style="display: flex; justify-content: flex-end; align-items: center; margin: 0; padding: 0;">
+    <li class="nav-link" style="margin-left: 20px;">
+      <a routerLink="/" routerLinkActive="active" style="color: whitesmoke; text-decoration: none;">Home</a>
+    </li>
+    <li class="nav-link" *ngIf="!userKey && !tokenKey" style="margin-left: 20px;">
+      <a routerLink="/register" routerLinkActive="active" style="color: whitesmoke; text-decoration: none;">Register</a>
+    </li>
+    <li class="nav-link" *ngIf="!userKey && !tokenKey" style="margin-left: 20px;">
+      <a routerLink="/login" routerLinkActive="active" style="color: whitesmoke; text-decoration: none;">Login</a>
+    </li>
+    <li class="nav-link" *ngIf="userKey && tokenKey" style="margin-left: 20px;">
+      <a routerLink="/" (click)="this.logout()" routerLinkActive="active" style="color: whitesmoke; text-decoration: none;">Logout</a>
+    </li>
+    <div *ngIf="userKey && tokenKey" style="color:whitesmoke; margin-left: 521px; text-decoration: none; font-weight: bold;">
+      User ID: {{this.userKey}} is Logged In
+  </div>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

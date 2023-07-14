@@ -1,0 +1,79 @@
+<div>
+  <style>
+    form[name="form"] {
+      max-width: 530px;
+      padding: 15px;
+      margin: 0 auto;
+      border-radius: 0.3em;
+      background-color: #f2f2f2;
+    }
+
+    form[name="form"] h1 {
+      font-style: Helvetica;
+      font-size: 28px;
+      font-weight: 600;
+      color: #000000;
+      margin-top: 5%;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    form[name="form"] h3 {
+      font-style: Helvetica;
+      font-size: 24px;
+      font-weight: 600;
+      color: #000000;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+
+    form[name="form"] label {
+      display: block;
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    form[name="form"] input[type="text"],
+    form[name="form"] input[type="password"] {
+      width: 100%;
+      padding: 4.5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    form[name="form"] div {
+      text-align: left;
+    }
+
+    form[name="form"] button[type="submit"] {
+      background-color: #3eb3bb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+
+  <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+    <div>
+      <h3>Welcome Back!</h3>
+      <h3>Login Here</h3>
+      <label for="username">Username</label>
+      <input required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
+      <label for="password">Password</label>
+      <input required type="password" name="password" [(ngModel)]="form.password" #password="ngModel" />
+    </div>
+    <button type="submit">Submit</button>
+    <span style="text-align: center; display: block; margin-top: 15px;">Don't have an account? <a routerLink="/register">Sign Up</a></span>
+  </form>
+</div>
